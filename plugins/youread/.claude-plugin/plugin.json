@@ -1,0 +1,7 @@
+{
+  "name": "youread",
+  "description": "Extract and analyze YouTube video content via subtitles. No downloads, no API keys, no external packages.",
+  "author": {
+    "name": "@yeyeeeeyeeee"
+  }
+}

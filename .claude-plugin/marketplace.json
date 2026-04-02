@@ -1,0 +1,30 @@
+{
+  "name": "bazaar",
+  "owner": {
+    "name": "intruder"
+  },
+  "description": "Personal skill marketplace",
+  "plugins": [
+    {
+      "name": "burn",
+      "description": "Show Claude Code usage costs by model, project, and time period",
+      "source": {
+        "source": "github",
+        "repo": "into-the-intraverse/claude-money-burn"
+      }
+    },
+    {
+      "name": "claude-perfectionist",
+      "description": "Audit and improve CLAUDE.md instruction harnesses",
+      "source": {
+        "source": "github",
+        "repo": "into-the-intraverse/claude-perfectionist"
+      }
+    },
+    {
+      "name": "youread",
+      "description": "Extract and analyze YouTube video content via subtitles",
+      "source": "./plugins/youread"
+    }
+  ]
+}

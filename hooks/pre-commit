@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Sync README.md plugin table from marketplace.json + inline plugins/
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+MARKETPLACE="$REPO_ROOT/.claude-plugin/marketplace.json"
+README="$REPO_ROOT/README.md"
+
+if [ ! -f "$MARKETPLACE" ] || [ ! -f "$README" ]; then
+  exit 0
+fi
+
+python3 "$REPO_ROOT/tools/sync_readme.py" "$MARKETPLACE" "$README" "$REPO_ROOT"
+
+# If README changed, stage it
+if ! git diff --quiet "$README" 2>/dev/null; then
+  git add "$README"
+fi
