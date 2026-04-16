@@ -25,6 +25,14 @@
       "name": "youread",
       "description": "Extract and analyze YouTube video content via subtitles",
       "source": "./plugins/youread"
+    },
+    {
+      "name": "playwright-cli",
+      "description": "Browser automation skills via Playwright CLI — token-efficient alternative to Playwright MCP",
+      "source": {
+        "source": "github",
+        "repo": "into-the-intraverse/playwright-cli"
+      }
     }
   ]
 }

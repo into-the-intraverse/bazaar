@@ -20,6 +20,7 @@ Then install individual skills:
 |---|---|
 | `burn` | Show Claude Code usage costs by model, project, and time period |
 | `claude-perfectionist` | Audit and improve CLAUDE.md instruction harnesses |
+| `playwright-cli` | Browser automation skills via Playwright CLI — token-efficient alternative to Playwright MCP |
 | `youread` | Extract and analyze YouTube video content via subtitles |
 
 ## Adding plugins
