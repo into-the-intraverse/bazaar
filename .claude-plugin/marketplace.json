@@ -31,8 +31,10 @@
       "description": "Browser automation skills via Playwright CLI — token-efficient alternative to Playwright MCP",
       "source": {
         "source": "github",
-        "repo": "into-the-intraverse/playwright-cli"
-      }
+        "repo": "microsoft/playwright-cli"
+      },
+      "skills": ["./skills/playwright-cli/"],
+      "strict": false
     },
     {
       "name": "ui-ux-pro-max",
@@ -42,6 +44,104 @@
         "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
         "ref": "v2.5.0",
         "sha": "b7e3af80f6e331f6fb456667b82b12cade7c9d35"
+      }
+    },
+    {
+      "name": "impeccable",
+      "description": "Design fluency for frontend development — polish, audit, critique commands with curated anti-pattern detection",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pbakaus/impeccable.git",
+        "path": "plugin"
+      }
+    },
+    {
+      "name": "product-manager-skills",
+      "description": "Product manager skill — diagnoses SaaS metrics, critiques PRDs, plans roadmaps, runs discovery, coaches PM career transitions",
+      "source": {
+        "source": "github",
+        "repo": "Digidai/product-manager-skills"
+      },
+      "skills": ["./SKILL.md"],
+      "strict": false
+    },
+    {
+      "name": "valyu-search",
+      "description": "Valyu API toolkit — real-time search across web, academic, financial, healthcare, news, and more, with AI-synthesized answers and deep research reports",
+      "source": {
+        "source": "github",
+        "repo": "valyuai/skills"
+      },
+      "skills": ["./valyu-search/valyu-best-practices/"],
+      "strict": false
+    },
+    {
+      "name": "remotion",
+      "description": "Remotion video production skill — code-first React animations, captions, 3D, charts, and rendering",
+      "source": {
+        "source": "github",
+        "repo": "remotion-dev/skills"
+      },
+      "skills": ["./skills/remotion/"],
+      "strict": false
+    },
+    {
+      "name": "googleworkspace",
+      "description": "Google Workspace CLI skills — Calendar, Drive, Docs, Sheets, Chat, Gmail, Classroom, Admin Reports (95 skills)",
+      "source": {
+        "source": "github",
+        "repo": "googleworkspace/cli"
+      },
+      "skills": ["./skills/"],
+      "strict": false
+    },
+    {
+      "name": "shannon",
+      "description": "Autonomous AI pentester for web apps and APIs — white-box security assessments with real exploit execution",
+      "source": {
+        "source": "github",
+        "repo": "unicodeveloper/shannon"
+      },
+      "skills": ["./SKILL.md"],
+      "strict": false
+    },
+    {
+      "name": "database-skills",
+      "description": "PlanetScale database skills — MySQL, Postgres, Vitess, and Neki schema design, query tuning, replication, and operations",
+      "source": {
+        "source": "github",
+        "repo": "planetscale/database-skills"
+      },
+      "skills": ["./skills/"],
+      "strict": false
+    },
+    {
+      "name": "excalidraw-diagram",
+      "description": "Create Excalidraw diagram JSON files that make visual arguments — workflows, architectures, concepts",
+      "source": {
+        "source": "github",
+        "repo": "coleam00/excalidraw-diagram-skill"
+      },
+      "skills": ["./SKILL.md"],
+      "strict": false
+    },
+    {
+      "name": "loki-mode",
+      "description": "Multi-agent autonomous startup system — takes a spec (PRD, GitHub issue, OpenAPI doc) to deployed product with minimal human intervention",
+      "source": {
+        "source": "github",
+        "repo": "asklokesh/loki-mode"
+      },
+      "skills": ["./SKILL.md"],
+      "strict": false
+    },
+    {
+      "name": "skill-seekers",
+      "description": "Transform 17 source types (docs, GitHub, PDFs, videos, Jupyter, Confluence, Notion, Slack) into AI-ready skills and RAG knowledge",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/yusufkaraaslan/Skill_Seekers.git",
+        "path": "distribution/claude-plugin"
       }
     }
   ]
