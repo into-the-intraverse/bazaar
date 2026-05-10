@@ -20,6 +20,7 @@ Then install individual skills:
 |---|---|
 | `burn` | Show Claude Code usage costs by model, project, and time period |
 | `claude-perfectionist` | Audit and improve CLAUDE.md instruction harnesses |
+| `context7` | Upstash Context7 — pull version-specific docs and code examples from source repositories into LLM context |
 | `database-skills` | PlanetScale database skills — MySQL, Postgres, Vitess, and Neki schema design, query tuning, replication, and operations |
 | `excalidraw-diagram` | Create Excalidraw diagram JSON files that make visual arguments — workflows, architectures, concepts |
 | `googleworkspace` | Google Workspace CLI skills — Calendar, Drive, Docs, Sheets, Chat, Gmail, Classroom, Admin Reports (95 skills) |

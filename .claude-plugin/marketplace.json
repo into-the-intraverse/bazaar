@@ -143,6 +143,15 @@
         "url": "https://github.com/yusufkaraaslan/Skill_Seekers.git",
         "path": "distribution/claude-plugin"
       }
+    },
+    {
+      "name": "context7",
+      "description": "Upstash Context7 — pull version-specific docs and code examples from source repositories into LLM context",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/upstash/context7.git",
+        "path": "plugins/claude/context7"
+      }
     }
   ]
 }
