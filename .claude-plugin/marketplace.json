@@ -33,6 +33,16 @@
         "source": "github",
         "repo": "into-the-intraverse/playwright-cli"
       }
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "description": "UI/UX design intelligence — styles, palettes, typography, component patterns for building polished interfaces",
+      "source": {
+        "source": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "ref": "v2.5.0",
+        "sha": "b7e3af80f6e331f6fb456667b82b12cade7c9d35"
+      }
     }
   ]
 }
