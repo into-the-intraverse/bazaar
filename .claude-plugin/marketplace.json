@@ -15,7 +15,7 @@
     },
     {
       "name": "claude-perfectionist",
-      "description": "Audit and improve CLAUDE.md instruction harnesses",
+      "description": "Audit and improve Claude Code instruction harnesses — CLAUDE.md, rules, hooks, skills, settings, MCP config",
       "source": {
         "source": "github",
         "repo": "into-the-intraverse/claude-perfectionist"
