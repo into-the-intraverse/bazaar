@@ -18,6 +18,7 @@ Then install individual skills:
 
 | Plugin | Description |
 |---|---|
+| `atomic-wiki` | Ingest -> atoms -> compile -> wiki -> query pipeline with automated lint maintenance |
 | `burn` | Show Claude Code usage costs by model, project, and time period |
 | `claude-perfectionist` | Audit and improve Claude Code instruction harnesses — CLAUDE.md, rules, hooks, skills, settings, MCP config |
 | `context7` | Upstash Context7 — pull version-specific docs and code examples from source repositories into LLM context |

@@ -6,6 +6,14 @@
   "description": "Personal skill marketplace",
   "plugins": [
     {
+      "name": "atomic-wiki",
+      "description": "Ingest -> atoms -> compile -> wiki -> query pipeline with automated lint maintenance",
+      "source": {
+        "source": "github",
+        "repo": "into-the-intraverse/atomic-wiki"
+      }
+    },
+    {
       "name": "burn",
       "description": "Show Claude Code usage costs by model, project, and time period",
       "source": {
