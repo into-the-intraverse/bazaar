@@ -1,6 +1,7 @@
 {
   "name": "youread",
-  "description": "Extract and analyze YouTube video content via subtitles. No downloads, no API keys, no external packages.",
+  "version": "0.2.0",
+  "description": "Extract YouTube content — subtitles plus on-screen slides, figures, and the papers/citations shown — into Markdown source notes for a wiki. Subtitles need no dependencies; visual capture uses yt-dlp + ffmpeg.",
   "author": {
     "name": "@yeyeeeeyeeee"
   }

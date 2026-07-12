@@ -47,8 +47,8 @@ def fetch_api_key(video_id):
     return m.group(1)
 
 
-def fetch_caption_tracks(video_id, api_key):
-    """Call the InnerTube player endpoint to get available caption tracks."""
+def fetch_player(video_id, api_key):
+    """Call the InnerTube player endpoint and return the parsed response."""
     payload = json.dumps({
         "context": {
             "client": {
@@ -67,15 +67,29 @@ def fetch_caption_tracks(video_id, api_key):
             "User-Agent": "com.google.android.youtube/20.10.38",
         },
     )
-    data = json.loads(urllib.request.urlopen(req, timeout=15).read().decode())
+    return json.loads(urllib.request.urlopen(req, timeout=15).read().decode())
 
-    captions = data.get("captions")
+
+def caption_tracks(player):
+    """Extract the caption track list from a player response."""
+    captions = player.get("captions")
     if not captions:
         return []
     renderer = captions.get("playerCaptionsTracklistRenderer")
     if not renderer:
         return []
     return renderer.get("captionTracks", [])
+
+
+def video_metadata(player):
+    """Extract title / channel / duration from a player response."""
+    details = player.get("videoDetails", {})
+    length = details.get("lengthSeconds")
+    return {
+        "title": details.get("title"),
+        "channel": details.get("author"),
+        "duration_s": int(length) if length and length.isdigit() else None,
+    }
 
 
 def pick_track(tracks, preferred_lang=None):
@@ -138,7 +152,17 @@ def main():
         sys.exit(1)
 
     api_key = fetch_api_key(video_id)
-    tracks = fetch_caption_tracks(video_id, api_key)
+    player = fetch_player(video_id, api_key)
+    tracks = caption_tracks(player)
+
+    meta = video_metadata(player)
+    if meta["title"]:
+        print(f"# Title: {meta['title']}", file=sys.stderr)
+    if meta["channel"]:
+        print(f"# Channel: {meta['channel']}", file=sys.stderr)
+    if meta["duration_s"]:
+        mm, ss = divmod(meta["duration_s"], 60)
+        print(f"# Duration: {mm:02d}:{ss:02d}", file=sys.stderr)
 
     if not tracks:
         print("No subtitles available for this video.", file=sys.stderr)

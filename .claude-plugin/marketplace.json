@@ -31,7 +31,7 @@
     },
     {
       "name": "youread",
-      "description": "Extract and analyze YouTube video content via subtitles",
+      "description": "Extract YouTube content — subtitles plus on-screen slides, figures, and paper citations — into Markdown source notes for a wiki",
       "source": "./plugins/youread"
     },
     {

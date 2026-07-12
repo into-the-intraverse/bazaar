@@ -34,7 +34,7 @@ Then install individual skills:
 | `skill-seekers` | Transform 17 source types (docs, GitHub, PDFs, videos, Jupyter, Confluence, Notion, Slack) into AI-ready skills and RAG knowledge |
 | `ui-ux-pro-max` | UI/UX design intelligence — styles, palettes, typography, component patterns for building polished interfaces |
 | `valyu-search` | Valyu API toolkit — real-time search across web, academic, financial, healthcare, news, and more, with AI-synthesized answers and deep research reports |
-| `youread` | Extract and analyze YouTube video content via subtitles |
+| `youread` | Extract YouTube content — subtitles plus on-screen slides, figures, and paper citations — into Markdown source notes for a wiki |
 
 ## Adding plugins
 
