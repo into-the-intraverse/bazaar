@@ -40,10 +40,10 @@ Install the visual-path tools (both are cross-platform):
 
 - **Windows:** `winget install yt-dlp.yt-dlp` and `winget install Gyan.FFmpeg` (or `uv tool install yt-dlp`)
 - **macOS:** `brew install yt-dlp ffmpeg`
-- **Linux:** `sudo apt install ffmpeg` (or your distro's package / a static build) and `uv tool install yt-dlp` (or `pipx install yt-dlp`)
+- **Linux:** `sudo apt install ffmpeg` (or your distro's package / a static build) and `uv tool install yt-dlp`
 
 YouTube extraction breaks periodically — if downloads start failing, **update yt-dlp first**
-(`uv tool upgrade yt-dlp`, `pipx upgrade yt-dlp`, or `yt-dlp -U`). The script needs a recent build.
+(`uv tool upgrade yt-dlp` or `yt-dlp -U`). The script needs a recent build.
 
 `extract_frames.py` checks for both tools and prints these hints if either is absent.
 

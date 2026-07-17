@@ -59,7 +59,7 @@ INSTALL_HINTS = """\
 This step needs yt-dlp and ffmpeg on PATH. Install them:
   Windows : winget install yt-dlp.yt-dlp ; winget install Gyan.FFmpeg
   macOS   : brew install yt-dlp ffmpeg
-  Linux   : sudo apt install ffmpeg && pipx install yt-dlp
+  Linux   : sudo apt install ffmpeg && uv tool install yt-dlp
             (or use your distro's packages / a static ffmpeg build)
 Without them, youread still works in subtitle-only mode."""
 
