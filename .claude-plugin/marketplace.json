@@ -15,14 +15,6 @@
       }
     },
     {
-      "name": "burn",
-      "description": "Show Claude Code usage costs by model, project, and time period",
-      "source": {
-        "source": "github",
-        "repo": "into-the-intraverse/claude-money-burn"
-      }
-    },
-    {
       "name": "claude-perfectionist",
       "description": "Audit and improve Claude Code instruction harnesses — CLAUDE.md, rules, hooks, skills, settings, MCP config",
       "source": {
@@ -103,15 +95,6 @@
       "strict": false
     },
     {
-      "name": "shannon",
-      "description": "Autonomous AI pentester for web apps and APIs — white-box security assessments with real exploit execution",
-      "source": {
-        "source": "github",
-        "repo": "unicodeveloper/shannon"
-      },
-      "strict": false
-    },
-    {
       "name": "database-skills",
       "description": "PlanetScale database skills — MySQL, Postgres, Vitess, and Neki schema design, query tuning, replication, and operations",
       "source": {
@@ -122,30 +105,12 @@
       "strict": false
     },
     {
-      "name": "excalidraw-diagram",
-      "description": "Create Excalidraw diagram JSON files that make visual arguments — workflows, architectures, concepts",
-      "source": {
-        "source": "github",
-        "repo": "coleam00/excalidraw-diagram-skill"
-      },
-      "strict": false
-    },
-    {
       "name": "loki-mode",
       "description": "Multi-agent autonomous startup system — takes a spec (PRD, GitHub issue, OpenAPI doc) to deployed product with minimal human intervention",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/asklokesh/loki-mode.git",
         "path": "plugins/loki-mode"
-      }
-    },
-    {
-      "name": "skill-seekers",
-      "description": "Transform 17 source types (docs, GitHub, PDFs, videos, Jupyter, Confluence, Notion, Slack) into AI-ready skills and RAG knowledge",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/yusufkaraaslan/Skill_Seekers.git",
-        "path": "distribution/claude-plugin"
       }
     },
     {
