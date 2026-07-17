@@ -121,11 +121,7 @@ Write `<dest>/note.md`. Omit any section that has no content.
 ---
 title: "<video title>"
 source: "<canonical https://www.youtube.com/watch?v=… URL>"
-video_id: "<id>"
 channel: "<channel>"
-uploaded: "<YYYY-MM-DD or omit>"
-duration: "<MM:SS>"
-fetched: "<today's date, YYYY-MM-DD>"
 subtitles: "<lang (manual|auto-generated)>"
 tags: [<a few topical tags>]
 ---
@@ -140,19 +136,12 @@ tags: [<a few topical tags>]
 
 ## Visual information
 
-### Slides
-- **[MM:SS] <slide title>** — <slide text / bullets>
+### Slides, figures and diagrams
+- **[MM:SS] <slide title>** — <slide text / bullets / takeaway>
   ![<short alt>](images/<frame file>)
 
 ### References & citations
 - **<Authors> (<year>)**, "<title>" — <arXiv:…/DOI/venue if shown> — shown at [MM:SS]
-
-### Figures & diagrams
-- **[MM:SS] <what it is>** — <description + takeaway>
-  ![<short alt>](images/<frame file>)
-
-### Code / commands
-- [MM:SS] `<code or command shown>`
 
 ### Links & resources shown
 - [MM:SS] <URL or resource exactly as shown — recorded, not visited>
@@ -169,7 +158,7 @@ If visuals were skipped (no tools / extraction failed), omit the **Visual inform
 Your final message is your return value — data for the main session, no user-facing prose:
 
 - `dest`: absolute path of the created folder
-- `title`, `channel`, `duration`, `uploaded`
+- `title`, `channel`
 - `subtitles`: lang (manual|auto-generated)
 - `images_kept`: N (0 if visuals were skipped, with the reason)
 - `summary`: the note's Summary section verbatim
