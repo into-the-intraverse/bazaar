@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "bazaar",
   "owner": {
     "name": "intruder"
@@ -70,7 +71,6 @@
         "source": "github",
         "repo": "Digidai/product-manager-skills"
       },
-      "skills": ["./SKILL.md"],
       "strict": false
     },
     {
@@ -85,12 +85,11 @@
     },
     {
       "name": "remotion",
-      "description": "Remotion video production skill — code-first React animations, captions, 3D, charts, and rendering",
+      "description": "Remotion video production skills — code-first React animations, captions, 3D, charts, and rendering",
       "source": {
         "source": "github",
         "repo": "remotion-dev/skills"
       },
-      "skills": ["./skills/remotion/"],
       "strict": false
     },
     {
@@ -110,7 +109,6 @@
         "source": "github",
         "repo": "unicodeveloper/shannon"
       },
-      "skills": ["./SKILL.md"],
       "strict": false
     },
     {
@@ -130,18 +128,16 @@
         "source": "github",
         "repo": "coleam00/excalidraw-diagram-skill"
       },
-      "skills": ["./SKILL.md"],
       "strict": false
     },
     {
       "name": "loki-mode",
       "description": "Multi-agent autonomous startup system — takes a spec (PRD, GitHub issue, OpenAPI doc) to deployed product with minimal human intervention",
       "source": {
-        "source": "github",
-        "repo": "asklokesh/loki-mode"
-      },
-      "skills": ["./SKILL.md"],
-      "strict": false
+        "source": "git-subdir",
+        "url": "https://github.com/asklokesh/loki-mode.git",
+        "path": "plugins/loki-mode"
+      }
     },
     {
       "name": "skill-seekers",

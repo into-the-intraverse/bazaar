@@ -5,8 +5,8 @@ Checks:
 2. Each plugin entry has `name`, `description`, `source`.
 3. For github / git-subdir sources: clones the source ref and verifies that
    either a `.claude-plugin/plugin.json` exists, or `strict: false` is set
-   along with `skills` paths that all resolve to a SKILL.md (file or folder
-   containing one) with valid frontmatter.
+   and skills resolve — via explicit `skills` paths, or default discovery
+   (a `skills/` dir or a root SKILL.md) — with valid `name` frontmatter.
 4. For local `./` sources: the path exists and contains
    `.claude-plugin/plugin.json` or a SKILL.md.
 
@@ -16,7 +16,9 @@ Exits non-zero on any failure. Cleans up clone cache by default; pass
 """
 
 import json
+import os
 import shutil
+import stat
 import subprocess
 import sys
 import tempfile
@@ -24,6 +26,18 @@ from pathlib import Path
 
 
 CACHE = Path(tempfile.gettempdir()) / "bazaar-validate-cache"
+
+
+def force_rmtree(path: Path) -> None:
+    """rmtree that clears read-only flags (git pack files on Windows)."""
+    if not path.exists():
+        return
+
+    def onexc(func, p, _exc):
+        os.chmod(p, stat.S_IWRITE)
+        func(p)
+
+    shutil.rmtree(path, onexc=onexc)
 
 
 def fail(msg: str) -> None:
@@ -58,8 +72,7 @@ def clone_source(source: dict, name: str) -> Path | None:
     """Clone the source into the cache. Returns the plugin root path."""
     CACHE.mkdir(parents=True, exist_ok=True)
     target = CACHE / name
-    if target.exists():
-        shutil.rmtree(target)
+    force_rmtree(target)
 
     src_type = source.get("source")
     if src_type == "github":
@@ -154,6 +167,22 @@ def validate_skill_path(plugin_root: Path, skill_path: str) -> bool:
     return True
 
 
+def validate_default_discovery(plugin_root: Path) -> bool:
+    """No explicit 'skills': Claude Code scans skills/, else loads a root SKILL.md."""
+    if (plugin_root / "skills").is_dir():
+        return validate_skill_path(plugin_root, "./skills/")
+    root_skill = plugin_root / "SKILL.md"
+    if not root_skill.is_file():
+        fail("no skills/ dir or root SKILL.md in source")
+        return False
+    meta = parse_frontmatter(root_skill.read_text(encoding="utf-8", errors="replace"))
+    if not meta or "name" not in meta:
+        fail("root SKILL.md missing 'name' frontmatter — skill would be named after the versioned install dir")
+        return False
+    ok(f"root SKILL.md → skill '{meta['name']}'")
+    return True
+
+
 def validate_plugin(plugin: dict, repo_root: Path) -> list[str]:
     """Return list of error messages; empty if valid."""
     errors = []
@@ -207,14 +236,13 @@ def validate_plugin(plugin: dict, repo_root: Path) -> list[str]:
                 fail(f"upstream plugin.json invalid JSON: {e}")
     else:
         if has_manifest:
-            warn("strict:false but upstream has plugin.json — Claude Code reports this as a conflict")
-        if not declared_skills:
-            errors.append(f"{name}: strict:false requires explicit 'skills' paths")
-            fail("strict:false requires explicit 'skills' paths")
-        else:
+            warn("strict:false but upstream has plugin.json — conflicts if it declares components")
+        if declared_skills:
             for sp in declared_skills:
                 if not validate_skill_path(plugin_root, sp):
                     errors.append(f"{name}: skill path invalid: {sp}")
+        elif not validate_default_discovery(plugin_root):
+            errors.append(f"{name}: no skills via default discovery (skills/ dir or root SKILL.md)")
 
     return errors
 
@@ -254,7 +282,7 @@ def main(argv: list[str]) -> int:
         for e in all_errors:
             print(f"   - {e}")
         if not keep:
-            shutil.rmtree(CACHE, ignore_errors=True)
+            force_rmtree(CACHE)
         return 1
     print(f"✅ all {len(data['plugins'])} plugins valid")
     if not keep:

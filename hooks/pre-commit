@@ -10,6 +10,11 @@ if [ ! -f "$MARKETPLACE" ] || [ ! -f "$README" ]; then
   exit 0
 fi
 
+# Schema-validate the marketplace manifest (offline, fast)
+if command -v claude >/dev/null 2>&1; then
+  claude plugin validate "$REPO_ROOT"
+fi
+
 python3 "$REPO_ROOT/tools/sync_readme.py" "$MARKETPLACE" "$README" "$REPO_ROOT"
 
 # If README changed, stage it

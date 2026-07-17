@@ -1,6 +1,6 @@
 # Bazaar
 
-Personal Claude Code skill marketplace.
+Personal Claude Code plugin marketplace.
 
 ## Usage
 
@@ -8,10 +8,10 @@ Personal Claude Code skill marketplace.
 /plugin marketplace add into-the-intraverse/bazaar
 ```
 
-Then install individual skills:
+Then install individual plugins:
 
 ```bash
-/plugin install <skill-name>@bazaar
+/plugin install <plugin-name>@bazaar
 ```
 
 ## Available plugins
@@ -29,7 +29,7 @@ Then install individual skills:
 | `loki-mode` | Multi-agent autonomous startup system — takes a spec (PRD, GitHub issue, OpenAPI doc) to deployed product with minimal human intervention |
 | `playwright-cli` | Browser automation skills via Playwright CLI — token-efficient alternative to Playwright MCP |
 | `product-manager-skills` | Product manager skill — diagnoses SaaS metrics, critiques PRDs, plans roadmaps, runs discovery, coaches PM career transitions |
-| `remotion` | Remotion video production skill — code-first React animations, captions, 3D, charts, and rendering |
+| `remotion` | Remotion video production skills — code-first React animations, captions, 3D, charts, and rendering |
 | `shannon` | Autonomous AI pentester for web apps and APIs — white-box security assessments with real exploit execution |
 | `skill-seekers` | Transform 17 source types (docs, GitHub, PDFs, videos, Jupyter, Confluence, Notion, Slack) into AI-ready skills and RAG knowledge |
 | `ui-ux-pro-max` | UI/UX design intelligence — styles, palettes, typography, component patterns for building polished interfaces |

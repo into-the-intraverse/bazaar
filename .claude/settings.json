@@ -1,0 +1,6 @@
+{
+  "enabledPlugins": {
+    "youread@bazaar": true,
+    "skill-creator@claude-plugins-official": true
+  }
+}
