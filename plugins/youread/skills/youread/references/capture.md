@@ -137,7 +137,8 @@ tags: [<a few topical tags>]
 ## Visual information
 
 ### Slides, figures and diagrams
-- **[MM:SS] <slide title>** — <slide text / bullets / takeaway>
+- **[MM:SS] <slide title>** — <slide text / bullets / takeaway; transcribe on-screen code and
+  equations verbatim in a fenced block>
   ![<short alt>](images/<frame file>)
 
 ### References & citations
