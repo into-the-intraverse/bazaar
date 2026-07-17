@@ -121,6 +121,11 @@
         "url": "https://github.com/upstash/context7.git",
         "path": "plugins/claude/context7"
       }
+    },
+    {
+      "name": "grill",
+      "description": "Idea interrogation that ends in a document — grill-style interview with one question at a time, decisions recorded as they land, final ADR/design doc for the knowledge base",
+      "source": "./plugins/grill"
     }
   ]
 }

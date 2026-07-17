@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "grill",
+  "version": "0.1.0",
+  "description": "Idea interrogation that ends in a document — one question at a time, each with a recommendation; decisions recorded as they land; final ADR/design doc ready to commit or feed to a wiki",
+  "author": {
+    "name": "aleksej pawlowskij"
+  }
+}

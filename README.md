@@ -23,6 +23,7 @@ Then install individual plugins:
 | `context7` | Upstash Context7 — pull version-specific docs and code examples from source repositories into LLM context |
 | `database-skills` | PlanetScale database skills — MySQL, Postgres, Vitess, and Neki schema design, query tuning, replication, and operations |
 | `googleworkspace` | Google Workspace CLI skills — Calendar, Drive, Docs, Sheets, Chat, Gmail, Classroom, Admin Reports (95 skills) |
+| `grill` | Idea interrogation that ends in a document — grill-style interview with one question at a time, decisions recorded as they land, final ADR/design doc for the knowledge base |
 | `impeccable` | Design fluency for frontend development — polish, audit, critique commands with curated anti-pattern detection |
 | `loki-mode` | Multi-agent autonomous startup system — takes a spec (PRD, GitHub issue, OpenAPI doc) to deployed product with minimal human intervention |
 | `playwright-cli` | Browser automation skills via Playwright CLI — token-efficient alternative to Playwright MCP |
