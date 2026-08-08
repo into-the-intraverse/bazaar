@@ -69,6 +69,11 @@ them flagged; either way the session ends here.
 - They may add across several turns. Move on only when they signal they are done.
 - If they ask a content question while retelling, answering breaks the test for that point — answer,
   then mark it revealed. A revealed point never counts as recalled.
+- If they ask for a warm-up before starting — the main points, a list of themes, "just remind me
+  what it covered" — that is the test asking to be cancelled, and the honest answer is no. Say why,
+  and say that fragments are the material: "something about heating, can't remember how" is a
+  usable answer, not a failure. The theme list is step 5's tool; handed over now it cues every
+  answer that follows.
 
 ### 5. Fill the gaps — one question per turn
 
@@ -116,6 +121,7 @@ nothing is committed without it.
 | Ingest's per-atom factcheck report shown before the interview | It is the answer key; it ships in step 6 |
 | "Did the video say X?" | Name the topic, never the claim |
 | Interview starts after the first paragraph | The user says when they are done, not you |
+| Theme list offered as a compromise when the user asks for a reminder | Naming six themes cues six answers; the list belongs to step 5 |
 | The user's wrong answer rewritten into the atom | Voice bends to the user, claims never do |
 | `version:` bumped while rewriting | Never committed → stays 1 |
 | Unrecalled atoms deleted | They stay, tagged `recall-gap` |
