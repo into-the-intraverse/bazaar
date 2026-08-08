@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "retell",
+  "version": "0.1.0",
+  "description": "Recall quiz that ends in atoms — extract a source into atoms and check the source holds up, interview the user on what they remember without revealing the atoms, then rewrite them in the user's own voice",
+  "author": {
+    "name": "aleksej pawlowskij"
+  }
+}

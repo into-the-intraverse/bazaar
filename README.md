@@ -29,6 +29,7 @@ Then install individual plugins:
 | `playwright-cli` | Browser automation skills via Playwright CLI — token-efficient alternative to Playwright MCP |
 | `product-manager-skills` | Product manager skill — diagnoses SaaS metrics, critiques PRDs, plans roadmaps, runs discovery, coaches PM career transitions |
 | `remotion` | Remotion video production skills — code-first React animations, captions, 3D, charts, and rendering |
+| `retell` | Recall quiz that ends in atoms — extract a source into atoms and check the source holds up, interview the user on what they remember without revealing the atoms, then rewrite them in the user's own voice |
 | `ui-ux-pro-max` | UI/UX design intelligence — styles, palettes, typography, component patterns for building polished interfaces |
 | `valyu-search` | Valyu API toolkit — real-time search across web, academic, financial, healthcare, news, and more, with AI-synthesized answers and deep research reports |
 | `youread` | Extract YouTube content — subtitles plus on-screen slides, figures, and paper citations — into Markdown source notes for a wiki |
